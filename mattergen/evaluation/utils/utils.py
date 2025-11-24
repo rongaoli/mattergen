@@ -73,7 +73,7 @@ def compute_rmsd_angstrom(struc1: Structure, struc2: Structure) -> float:
     normalization = (len(struc1) / avg_l.volume) ** (1 / 3)
 
     if match is None:  # Return MAX_RMSD since matching failed but could be computed
-        return MAX_RMSD / normalization
+        return MAX_RMSD
     return match[0] / normalization
 
 
